@@ -21,12 +21,12 @@ The zoos want to display both the scientific name and the animal name in front o
 
 */
 const displayNames = [];
-zooAnimals.forEach(getAnimals)
+zooAnimals.forEach(
 function getAnimals(item, index) {
   displayNames["Name"] = item.animal_name;
   displayNames["Scientific"] = item.scientific_name;
   console.log(displayNames);
-
+});
 /* Request 2: .map()
 
 The zoos need a list of all their animal's names (animal_name only) converted to lower case. Using map, create a new array of strings named lowCaseAnimalNames, each string following this pattern: "jackal, asiatic". Log the resut.
@@ -57,8 +57,8 @@ console.log(lowPopulationAnimals);
 The zoos need to know their total animal population across the United States. Find the total population from all the zoos using the .reduce() method. Remember the reduce method takes two arguments: a callback (which itself takes two args), and an initial value for the count.
 
 */
-//let populationTotal = 0;//
-console.log(populationTotal);
+// let populationTotal = 0;
+// console.log(populationTotal);
 
 const populationTotal = zooAnimals.reduce((acc, zooAnimals) => {
   console.log(acc, zooAnimals.population)
@@ -102,4 +102,4 @@ console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice t
 
 
 
-// Stretch: If you haven't already, convert your array method callbacks into arrow functions.
+// Stretch: If you haven't already, convert your array method callbacks into arrow //// //functions
